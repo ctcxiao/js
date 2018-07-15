@@ -1,0 +1,79 @@
+2.traffic jam
+if(isAfterEightPm){
+    answer = 'there is traffic jam';
+    } else{
+    if(numberOfAutoRickshaws>=40){
+    answer = 'there is traffic jam';
+    }else{
+    answer = 'there is no traffic jam';
+    }
+    }
+
+3.auto rickshow meter
+// helper function for output
+function writeAnswer(answer) { 
+    $('div.answer').append($('<div>').text(answer));
+}
+
+function isTrafficJam(d, w,isAfterEightPm) {
+    var answer;
+    if(isAfterEightPm){
+    answer = (20+8*(d-1)+4*w)*1.5;
+    }else{
+    answer = (20+8*(d-1)+4*w);
+    }
+    // write some code here!
+    
+    writeAnswer(answer);
+}
+
+isTrafficJam(6,8, false);// js
+
+4.Indian Currency
+// helper function for output
+function writeAnswer(answer) { 
+    $('div.answer').append($('<div>').text(answer));
+}
+
+function isIndianCurrency(array) {
+    var answer=0;
+    for(var i=0;i<array.length;i++){
+    	if(array[i]%10==0){
+      answer+=array[i];
+      }else{
+      break;
+      }
+    }
+    // write some code here!
+    
+    writeAnswer(answer);
+}
+
+isIndianCurrency([10,30,20,13]);// js
+
+5.Multi-language Advertisement
+function writeAnswer(answer) { 
+    $('div.answer').append($('<div>').text(answer));
+}
+
+function multiLanguage(array) {
+		
+    var answer= new Array();
+    for(var i=0;i<array.length;i++){
+    	if(i == 1){
+      	answer = answer.concat(array[i].reverse());
+      } else{
+      answer = answer.concat(array[i]);
+      }
+    }
+    // write some code here!
+   
+    writeAnswer("words:"+answer);
+    writeAnswer("count:"+answer.length)
+}
+
+multiLanguage([
+ ["zara", "dhyaan", "dein"],
+ ["mazarat", "chahenge"], 
+ ["attention", "please"]
+]);// js
